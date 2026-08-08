@@ -1,0 +1,8 @@
+/* ===== src/styles/style.css =====
+   Central style entrypoint for the app.
+   Imports all individual CSS modules for login, dashboard, and global theme.
+*/
+
+@import "./index.css";
+@import "./App.css";
+@import "./Dashboard.css";

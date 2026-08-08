@@ -1,0 +1,110 @@
+/* ===== index.css =====
+   Galactic Dark & Glassmorphic Global Theme for Carrier API Admin.
+*/
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Dark Cyber Palette */
+  --bg-main: #070514;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #0f0b29 0%, #04030a 100%);
+  
+  /* Glassmorphism Panels */
+  --card-bg: rgba(15, 11, 38, 0.6);
+  --card-border: rgba(139, 92, 246, 0.2);
+  --card-border-glow: rgba(139, 92, 246, 0.55);
+  --card-bg-hover: rgba(22, 16, 56, 0.85);
+
+  /* Accents */
+  --accent-primary: #a78bfa; /* Cyber Purple */
+  --accent-primary-hover: #c084fc;
+  --accent-secondary: #22d3ee; /* Neon Cyan */
+  --accent-pink: #f472b6; /* Hot Pink */
+  --accent-green: #34d399; /* Neon Emerald */
+  
+  /* Text */
+  --text-main: #cbd5e1;
+  --text-muted: #64748b;
+  --text-header: #ffffff;
+  
+  /* Glows */
+  --shadow-neon: 0 0 25px rgba(139, 92, 246, 0.25);
+  --shadow-neon-cyan: 0 0 25px rgba(34, 211, 238, 0.25);
+  --shadow-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-main);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 11, 38, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 4px;
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+  box-shadow: 0 0 8px var(--accent-primary);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--text-header);
+  letter-spacing: -0.025em;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-primary-hover);
+}
+
+/* Utilities */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
